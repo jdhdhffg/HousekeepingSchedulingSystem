@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Navabr = () => {
   const [adminStatus, setAdminStatus] = useState(true);
   function login() {
     setAdminStatus(!adminStatus);
@@ -15,67 +15,49 @@ const Sidebar = () => {
       </div>
       <div className="sidebar ">
         <div className="sidebar-item ">
-          <Link>
-            <i class="bi bi-tv"></i>
-          </Link>
+          <i class="bi bi-tv"></i>
           Dashboard
         </div>
         {!adminStatus && (
           <div>
             <div className="sidebar-item ">
-              <Link>
-                <i class="bi bi-telegram"></i>My Requests
-              </Link>
+              <i class="bi bi-telegram"></i>My Requests
             </div>
             <div className="sidebar-item ">
-              <Link>
-                <i class="bi bi-joystick"></i>Status
-              </Link>
+              <i class="bi bi-joystick"></i>Status
             </div>
             <div className="sidebar-item ">
-              <Link>
-                <i class="bi bi-person-circle"></i>Profile
-              </Link>
+              <i class="bi bi-person-circle"></i>Profile
             </div>
             <div className="sidebar-item ">
-              <Link>
-                <i class="bi bi-card-checklist"></i>Feedback
-              </Link>
+              <i class="bi bi-card-checklist"></i>Feedback
             </div>
           </div>
         )}
         {adminStatus && (
           <div>
             <div className="sidebar-item ">
-              <Link>
-                <i class="bi bi-telegram"></i>Requests
-              </Link>
+              <i class="bi bi-telegram"></i>Requests
             </div>
             <div className="sidebar-item ">
-              <Link>
-                <i class="bi bi-person-circle"></i>Housekeepers
-              </Link>
+              <i class="bi bi-person-circle"></i>Housekeepers
             </div>
             <div className="sidebar-item ">
-              <Link>
-                <i class="bi bi-person-bounding-box"></i>Students
-              </Link>
+              <i class="bi bi-person-bounding-box"></i>Students
             </div>
             <div className="sidebar-item ">
-              <Link>
-                <i class="bi bi-card-checklist"></i>Feedbacks
-              </Link>
+              <i class="bi bi-card-checklist"></i>Feedbacks
             </div>
           </div>
         )}
-        <div className="sidebar-item " onClick={login}>
-          <Link to="/login">
+        <Link to="/login">
+          <div className="sidebar-item " onClick={login}>
             <i class="bi bi-box-arrow-left"></i>Logout
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default Navabr;

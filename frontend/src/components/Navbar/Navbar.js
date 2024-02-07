@@ -7,6 +7,7 @@ const Navabr = () => {
   function login() {
     setAdminStatus(!adminStatus);
   }
+  // new
   return (
     <div>
       <div className="header">
